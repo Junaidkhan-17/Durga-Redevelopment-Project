@@ -1,4 +1,4 @@
-import "../styles/whydifferent.css";
+import "../styles/temp.css";
 import differentbg1 from "../image/differentbg1.png";
 
 import {
