@@ -98,7 +98,7 @@ function App() {
     );
   }
 
-  if (path === "/ContactPage") {
+  if (path === "/contact-Page") {
     return (
       <>
         <GlobalScrollFade />
