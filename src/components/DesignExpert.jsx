@@ -1,4 +1,4 @@
-import "../styles/designexpert.css";
+import "../styles/designExpert.css";
 
 function DesignExpert() {
   return (
