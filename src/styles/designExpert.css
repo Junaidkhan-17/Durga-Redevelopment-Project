@@ -1,0 +1,339 @@
+﻿/* ===============================
+   GLOBAL
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+.design-expert-page,
+.perks-section {
+  font-family: "DM Sans", sans-serif;
+}
+
+
+/* ===============================
+   HERO SECTION
+================================ */
+
+.design-expert-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+
+/* Background */
+
+.design-expert-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.45);
+  transform: scale(1.1);
+}
+
+
+/* Overlay */
+
+.design-expert-overlay {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(
+    rgba(10, 15, 25, 0.85),
+    rgba(10, 15, 25, 0.7)
+  );
+  padding: 120px 6% 80px;
+  z-index: 2;
+}
+
+
+/* Container */
+
+.design-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* Grid */
+
+.design-expert-grid {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 40px;
+  align-items: center;
+}
+
+
+/* ===============================
+   HERO TEXT
+================================ */
+
+.design-expert-copy {
+  color: #fff;
+}
+
+.design-expert-copy h1 {
+  font-size: 58px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.design-expert-copy span {
+  color: #ffc107;
+}
+
+.design-expert-copy p {
+  font-size: 18px;
+  max-width: 600px;
+  color: #e8e8e8;
+  margin-bottom: 28px;
+}
+
+
+/* Button */
+
+.hero-btn {
+  display: inline-block;
+  padding: 13px 32px;
+  background: linear-gradient(135deg, #ffc107, #ffb300);
+  color: #111;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(255, 193, 7, 0.6);
+}
+
+
+/* ===============================
+   FORM
+================================ */
+
+.design-expert-form-card {
+  background: rgba(20, 25, 35, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 32px 28px;
+  color: #fff;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  transition: 0.3s;
+}
+
+.design-expert-form-card:hover {
+  transform: translateY(-6px);
+}
+
+.design-expert-form-card h2 {
+  color: #ffc107;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* Inputs */
+
+.design-expert-form-card input,
+.design-expert-form-card select {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 14px;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  transition: 0.25s;
+}
+
+.design-expert-form-card input:focus,
+.design-expert-form-card select:focus {
+  border-color: #ffc107;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.3);
+}
+
+.design-expert-form-card option {
+  color: #111;
+}
+
+
+/* Two Column */
+
+.form-row-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+
+/* Checkbox */
+
+.design-check {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  margin: 14px 0;
+}
+
+
+/* Submit */
+
+.submit-btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #ffc107, #ffb300);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(255, 193, 7, 0.7);
+}
+
+
+/* ===============================
+   PERKS
+================================ */
+
+.perks-section {
+  padding: 90px 6%;
+  background: #fff;
+}
+
+.perks-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* Tabs */
+
+.perks-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: #f6f6f6;
+  padding: 8px;
+  border-radius: 40px;
+  max-width: 520px;
+  margin: 0 auto 50px;
+}
+
+.perks-tabs button {
+  background: transparent;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.perks-tabs button:hover {
+  background: #ffe9a3;
+}
+
+.perks-tabs .active {
+  background: #ffc107;
+}
+
+
+/* Header */
+
+.perks-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.perks-header h2 {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.perks-header span {
+  color: #ffc107;
+}
+
+.perks-header p {
+  max-width: 700px;
+  margin: auto;
+  color: #666;
+}
+
+
+/* Grid */
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+
+/* Card */
+
+.perk-card {
+  background: #fafafa;
+  padding: 28px;
+  border-radius: 18px;
+  border-left: 5px solid #ffc107;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+  transition: 0.3s;
+}
+
+.perk-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 992px) {
+
+  .design-expert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .design-expert-copy h1 {
+    font-size: 42px;
+  }
+
+  .perks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+
+  .design-expert-overlay {
+    padding: 90px 5% 60px;
+  }
+
+  .design-expert-copy h1 {
+    font-size: 30px;
+  }
+
+  .form-row-two {
+    grid-template-columns: 1fr;
+  }
+
+  .perks-grid {
+    grid-template-columns: 1fr;
+  }
+}

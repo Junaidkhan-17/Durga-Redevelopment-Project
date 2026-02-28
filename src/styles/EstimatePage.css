@@ -1,0 +1,252 @@
+/* ===============================
+   GLOBAL
+================================ */
+
+.estimate-page {
+  font-family: "DM Sans", sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
+
+/* ===============================
+   HERO
+================================ */
+
+.estimate-hero {
+  min-height: 70vh;
+  background: linear-gradient(
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6)
+    ),
+    url("../image/site.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.estimate-hero-content {
+  text-align: center;
+  color: #fff;
+}
+
+.estimate-hero h1 {
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+.estimate-hero span {
+  color: #ffc107;
+}
+
+.estimate-btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #ffc107;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.estimate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255,193,7,0.6);
+}
+
+
+/* ===============================
+   SECTION
+================================ */
+
+.estimate-section {
+  padding: 70px 6%;
+  background: #fff;
+}
+
+.estimate-section.light {
+  background: #f9f9f9;
+}
+
+.estimate-section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+
+/* ===============================
+   GRID
+================================ */
+
+.estimate-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 26px;
+}
+
+
+/* ===============================
+   MATERIAL CARD
+================================ */
+
+.estimate-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.estimate-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.estimate-card h4 {
+  margin: 14px 0;
+}
+
+.estimate-card button {
+  margin-bottom: 16px;
+  padding: 8px 20px;
+  border: none;
+  background: #ffc107;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.estimate-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* ===============================
+   INFO CARD
+================================ */
+
+.info-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.info-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.info-card h4 {
+  padding: 14px 14px 0;
+}
+
+.info-card p {
+  padding: 10px 14px 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* ===============================
+   INFO TEXT
+================================ */
+
+.estimate-info {
+  padding: 70px 6%;
+  text-align: center;
+  background: #fffdf4;
+}
+
+.estimate-info h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+.estimate-info p {
+  max-width: 800px;
+  margin: auto;
+  color: #666;
+}
+
+
+/* ===============================
+   FAQ
+================================ */
+
+.estimate-faq {
+  padding: 70px 6%;
+  background: #111;
+  color: #fff;
+}
+
+.estimate-faq h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq-list details {
+  background: #1c1c1c;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.faq-list summary {
+  font-weight: 600;
+}
+
+.faq-list p {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media(max-width:992px){
+
+  .estimate-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .estimate-hero h1{
+    font-size: 40px;
+  }
+}
+
+@media(max-width:576px){
+
+  .estimate-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .estimate-hero h1{
+    font-size: 28px;
+  }
+
+  .estimate-section h2{
+    font-size: 26px;
+  }
+}

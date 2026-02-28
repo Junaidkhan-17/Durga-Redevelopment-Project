@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Manrope:wght@500;600;700&display=swap");
+
+.custom-navbar {
+  --navbar-accent: #d4af37;
+  --navbar-accent-deep: #b58f18;
+  --navbar-ink: #f8f8fb;
+  min-height: 70px;
+  padding: 10px 0;
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  font-family: "Manrope", "Segoe UI", sans-serif;
+}
+
+.navbar-blur {
+  background:
+    linear-gradient(120deg, rgba(8, 15, 26, 0.78), rgba(21, 30, 45, 0.5)),
+    radial-gradient(circle at 85% -80%, rgba(212, 175, 55, 0.45), transparent 55%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+}
+
+.navbar-dark-bg {
+  background:
+    linear-gradient(120deg, rgba(6, 12, 21, 0.92), rgba(16, 23, 35, 0.9)),
+    radial-gradient(circle at 100% -120%, rgba(212, 175, 55, 0.34), transparent 60%);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.36);
+  border-bottom-color: rgba(212, 175, 55, 0.2);
+}
+
+.custom-navbar .navbar-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  margin-left: -14px;
+  padding-left: 0;
+}
+
+.navbar-logo {
+  max-height: 44px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transform: scale(1.38);
+  transform-origin: left center;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.25));
+}
+
+.navbar-logo-name {
+  width: auto;
+  max-height: 34px;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.14);
+  transform-origin: left center;
+}
+
+.navbar-right {
+  gap: 12px;
+}
+
+.hamburger-btn {
+  position: relative;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+.hamburger-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 175, 55, 0.8);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+}
+
+.hamburger-btn span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 999px;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.hamburger-btn.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-btn.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.profile-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  background: rgba(255, 255, 255, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.24s ease, background 0.24s ease, border-color 0.24s ease;
+}
+
+.profile-icon:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(212, 175, 55, 0.85);
+}
+
+.profile-icon i {
+  font-size: 19px;
+  color: var(--navbar-accent);
+}
+
+.custom-navbar .btn-warning {
+  background: linear-gradient(130deg, #f7c948, #d8a11c);
+  border-color: #d8a11c;
+  color: #101217;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 10px 24px rgba(212, 175, 55, 0.35);
+}
+
+.custom-navbar .btn-warning:hover,
+.custom-navbar .btn-warning:focus {
+  background: linear-gradient(130deg, #ffd35e, #deaa2b);
+  border-color: #deaa2b;
+  color: #101217;
+  box-shadow: 0 14px 28px rgba(212, 175, 55, 0.42);
+}
+
+.nav-page-overlay {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(212, 175, 55, 0.16), transparent 45%),
+    rgba(4, 8, 14, 0.82);
+  backdrop-filter: blur(8px);
+  z-index: 1060;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease;
+  overflow-y: auto;
+}
+
+.nav-page-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-page-shell {
+  margin-top: 88px;
+  margin-bottom: 20px;
+  background: linear-gradient(145deg, #f9fafc, #edf1f7);
+  border: 1px solid #dbe2ec;
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.26);
+  animation: navShellIn 0.28s ease;
+}
+
+@keyframes navShellIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.nav-page-left {
+  background: linear-gradient(180deg, #f3f5f9, #edf1f7);
+  padding: 28px 22px;
+  border-right: 1px solid #d9e1ec;
+}
+
+.contact-block {
+  margin-bottom: 20px;
+}
+
+.contact-block h3 {
+  font-family: "Outfit", "Segoe UI", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #141c29;
+}
+
+.contact-block a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1d2736;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 8px 10px;
+  transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease;
+}
+
+.contact-block a:hover {
+  color: #0d1420;
+  background: #e8edf6;
+  transform: translateX(3px);
+}
+
+.office-list h4 {
+  font-family: "Outfit", "Segoe UI", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #1b2433;
+}
+
+.office-card {
+  background: #fff;
+  border: 1px solid #dde5f0;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+.office-card:hover {
+  transform: translateY(-4px);
+  border-color: #f1ca65;
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.11);
+}
+
+.office-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.office-title-row i {
+  color: var(--navbar-accent-deep);
+}
+
+.office-title-row h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #161d2a;
+}
+
+.office-card p {
+  margin: 6px 0;
+  color: #384255;
+  font-size: 0.88rem;
+}
+
+.office-card a {
+  color: var(--navbar-accent-deep);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-page-right {
+  padding: 22px;
+  background: #f7f9fc;
+}
+
+.nav-page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.nav-page-head h2 {
+  margin: 0;
+  font-family: "Outfit", "Segoe UI", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #121b2b;
+}
+
+.nav-close-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  border: 1px solid #cad4e4;
+  background: #161f2f;
+  color: #fff;
+  transition: transform 0.22s ease, background 0.22s ease;
+}
+
+.nav-close-btn:hover {
+  transform: rotate(90deg);
+  background: #111827;
+}
+
+.menu-link-list a {
+  position: relative;
+  display: block;
+  padding: 14px 44px 14px 16px;
+  border: 1px solid #dbe3ef;
+  background: #fff;
+  color: #111c2f;
+  text-decoration: none;
+  font-family: "Outfit", "Segoe UI", sans-serif;
+  font-size: clamp(1.1rem, 2.8vw, 1.65rem);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.menu-link-list a + a {
+  margin-top: 8px;
+}
+
+.menu-link-list a::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0%;
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0));
+  transition: width 0.25s ease;
+}
+
+.menu-link-list a::after {
+  content: "->";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-4px);
+  opacity: 0;
+  color: var(--navbar-accent-deep);
+  font-size: 0.95rem;
+  font-weight: 800;
+  transition: all 0.22s ease;
+}
+
+.menu-link-list a:hover {
+  color: #0f1726;
+  border-color: #f0cb6c;
+  padding-left: 22px;
+}
+
+.menu-link-list a:hover::before {
+  width: 100%;
+}
+
+.menu-link-list a:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.menu-location-list,
+.menu-video-section {
+  margin-top: 16px;
+  background: #fff;
+  border: 1px solid #dbe3ef;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.menu-location-list h4,
+.menu-video-section h4 {
+  margin-bottom: 10px;
+  font-family: "Outfit", "Segoe UI", sans-serif;
+  font-size: 1.1rem;
+  color: #151f30;
+}
+
+.menu-location-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.menu-location-grid a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid #e1e7f1;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1a2434;
+  background: #fafcff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.menu-location-grid a:hover {
+  background: #fff8e4;
+  border-color: var(--navbar-accent);
+  transform: translateY(-2px);
+}
+
+.menu-location-grid a i {
+  color: var(--navbar-accent-deep);
+  font-size: 0.85rem;
+}
+
+.menu-video-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e1e7f1;
+}
+
+.menu-video-wrap iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+@media (max-width: 1100px) {
+  .custom-navbar .btn-warning {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .custom-navbar {
+    min-height: 58px;
+    padding: 7px 0;
+  }
+
+  .custom-navbar .navbar-brand {
+    margin-left: -6px;
+    gap: 8px;
+  }
+
+  .navbar-logo {
+    max-height: 34px;
+    transform: scale(1.14);
+  }
+
+  .navbar-logo-name {
+    max-height: 26px;
+    transform: scale(1.06);
+  }
+
+  .nav-page-shell {
+    margin-top: 78px;
+    grid-template-columns: 1fr;
+  }
+
+  .nav-page-left {
+    border-right: 0;
+    border-bottom: 1px solid #d9e1ec;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-navbar {
+    min-height: 52px;
+    padding: 6px 0;
+  }
+
+  .navbar-logo {
+    max-height: 30px;
+    transform: scale(1.08);
+  }
+
+  .navbar-logo-name {
+    max-height: 22px;
+    transform: scale(1.04);
+  }
+
+  .hamburger-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .profile-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .profile-icon i {
+    font-size: 17px;
+  }
+
+  .custom-navbar .btn-warning {
+    display: none;
+  }
+
+  .nav-page-shell {
+    margin-top: 66px;
+    border-radius: 12px;
+  }
+
+  .menu-location-grid {
+    grid-template-columns: 1fr;
+  }
+}

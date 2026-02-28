@@ -1,0 +1,120 @@
+/* =============================
+   LOGO SLIDER
+============================= */
+
+.logo-slider-section {
+  background: #f9fafb;
+  padding: 70px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.logo-slider-section h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 35px;
+}
+
+
+/* Slider Box */
+.logo-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* Moving Track */
+.logo-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+
+  animation: scroll 40s linear infinite;
+}
+
+
+/* Logo Images */
+.logo-track img {
+  height: 90px;
+  min-width: 160px;
+
+  margin: 0 45px;
+
+  object-fit: contain;
+
+  background: transparent;
+
+  opacity: 0.85;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Hover Effect */
+.logo-track img:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+
+/* Animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Pause on Hover */
+.logo-slider:hover .logo-track {
+  animation-play-state: paused;
+}
+
+
+
+/* =============================
+   RESPONSIVE
+============================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  .logo-track img {
+    height: 45px;
+    min-width: 120px;
+    margin: 0 30px;
+  }
+
+  .logo-slider-section {
+    padding: 50px 0;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 576px) {
+
+  .logo-track img {
+    height: 32px;
+    min-width: 90px;
+    margin: 0 18px;
+  }
+
+  .logo-track {
+    animation-duration: 55s;
+  }
+
+  .logo-slider-section h3 {
+    font-size: 20px;
+  }
+
+  .logo-slider-section {
+    padding: 35px 0;
+  }
+}

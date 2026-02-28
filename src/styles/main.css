@@ -1,0 +1,123 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #111;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.btn,
+button,
+.services-btn,
+.vr-btn,
+.knowledge-link {
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover,
+button:hover,
+.services-btn:hover,
+.vr-btn:hover,
+.knowledge-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+.btn:active,
+button:active,
+.services-btn:active,
+.vr-btn:active,
+.knowledge-link:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+.btn:focus-visible,
+button:focus-visible,
+.services-btn:focus-visible,
+.vr-btn:focus-visible,
+.knowledge-link:focus-visible {
+  outline: 2px solid rgba(255, 193, 7, 0.7);
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+video,
+canvas,
+svg,
+iframe {
+  max-width: 100%;
+}
+
+@media (max-width: 992px) {
+  .container,
+  .container-fluid {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  h1 {
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 576px) {
+  .container,
+  .container-fluid {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  h1 {
+    font-size: clamp(1.85rem, 8vw, 2.35rem);
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 6.5vw, 1.95rem);
+    line-height: 1.25;
+  }
+
+  p,
+  li {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .btn,
+  button {
+    min-height: 42px;
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .container,
+  .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

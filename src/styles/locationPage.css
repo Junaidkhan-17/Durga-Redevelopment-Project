@@ -1,0 +1,264 @@
+﻿.location-page {
+  background: #fff;
+  padding-top: 72px;
+}
+
+.location-hero {
+  background: linear-gradient(135deg, #0f1116, #1b2430);
+  color: #fff;
+  padding: 80px 0 58px;
+}
+
+.location-hero h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.location-hero h1 span {
+  color: #ffc107;
+}
+
+.location-hero p {
+  max-width: 800px;
+  color: #efefef;
+  font-size: 17px;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.location-gallery-card,
+.location-map-card,
+.location-contact-wrap,
+.location-testimonials {
+  background: #fffaf0;
+  border: 1px solid #f2deaa;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.location-gallery-card h3,
+.location-map-card h3,
+.location-testimonials h3,
+.location-contact-wrap h3 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.gallery-note {
+  color: #5c5c5c;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.location-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.location-gallery img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location-gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+.location-map-card iframe {
+  width: 100%;
+  min-height: 350px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.location-testimonials {
+  margin-top: 18px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.testimonial-card {
+  background: linear-gradient(160deg, #ffffff, #fff8e5);
+  border-radius: 12px;
+  border: 1px solid #ecd9a7;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  animation: testimonialIn 0.4s ease both;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.quote-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 193, 7, 0.22);
+  color: #8f6400;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-stars {
+  letter-spacing: 0.05em;
+  color: #f0a500;
+  font-size: 13px;
+}
+
+.testimonial-card p {
+  margin-bottom: 10px;
+  color: #303030;
+}
+
+.testimonial-card h4 {
+  margin: 0;
+  color: #9a6d00;
+  font-size: 14px;
+}
+
+@keyframes testimonialIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.location-contact-wrap {
+  margin: 18px 0 38px;
+}
+
+.location-contact-form {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #f0e1ba;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.location-contact-form .form-control {
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  padding: 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.location-contact-form .form-control:hover {
+  border-color: #f0c66f;
+  transform: translateY(-1px);
+}
+
+.location-contact-form .form-control:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+}
+
+.form-full {
+  grid-column: 1 / -1;
+}
+
+.submit-note {
+  margin: 0;
+  color: #2b7a32;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .location-hero h1 {
+    font-size: 38px;
+  }
+
+  .location-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .location-contact-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .location-page {
+    padding-top: 64px;
+  }
+
+  .location-hero {
+    padding: 62px 0 46px;
+  }
+
+  .location-hero h1 {
+    font-size: 30px;
+  }
+
+  .location-hero p {
+    font-size: 14px;
+  }
+
+  .location-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .location-gallery img {
+    height: 190px;
+  }
+
+  .location-map-card iframe {
+    min-height: 260px;
+  }
+
+  .location-gallery-card h3,
+  .location-map-card h3,
+  .location-testimonials h3,
+  .location-contact-wrap h3 {
+    font-size: 21px;
+  }
+
+  .testimonial-grid,
+  .location-contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .location-contact-form {
+    padding: 14px;
+  }
+}

@@ -1,0 +1,162 @@
+.partners-section {
+  padding: 90px 0;
+  background: #f8fafc;
+}
+
+.partners-header {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.partners-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.partners-header span {
+  color: #ffc107;
+}
+
+.partners-header p {
+  color: #666;
+  font-size: 17px;
+}
+
+.our-panel,
+.technical-partners {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.our-panel {
+  margin-bottom: 22px;
+}
+
+.our-panel h3,
+.technical-partners h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.logo-marquee {
+  overflow: hidden;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #fffaf0, #fff);
+  border: 1px solid #f4e2b6;
+}
+
+.partners-logo-track {
+  display: flex;
+  width: max-content;
+  animation: logoMove 22s linear infinite;
+}
+
+.logo-marquee:hover .partners-logo-track {
+  animation-play-state: paused;
+}
+
+.logo-tile {
+  min-width: 170px;
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ececec;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.logo-tile:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.logo-tile img {
+  max-width: 115px;
+  max-height: 46px;
+  object-fit: contain;
+}
+
+@keyframes logoMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.partner-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.partner-card {
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  padding: 16px;
+  background: #fffaf0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.1);
+}
+
+.partner-card h4 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.partner-card h5 {
+  font-size: 14px;
+  color: #a07000;
+  margin-bottom: 8px;
+}
+
+.partner-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+}
+
+@media (max-width: 992px) {
+  .partner-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .partners-header h2 {
+    font-size: 34px;
+  }
+
+  .partners-logo-track {
+    animation-duration: 16s;
+  }
+}
+
+@media (max-width: 576px) {
+  .partners-section {
+    padding: 60px 0;
+  }
+
+  .partners-header h2 {
+    font-size: 26px;
+  }
+
+  .partners-header p {
+    font-size: 15px;
+  }
+
+  .logo-tile {
+    min-width: 140px;
+    min-height: 76px;
+    margin: 8px;
+  }
+}

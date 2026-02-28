@@ -1,0 +1,255 @@
+/* =====================================================
+   CONTACT TECH BACKGROUND — FINAL UPDATED VERSION
+===================================================== */
+
+.contact-tech {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 24px;
+  overflow: hidden;
+
+}
+
+/* ---------------- GRID BACKGROUND ---------------- */
+
+.contact-tech-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(30deg, rgba(72,176,255,.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(72,176,255,.18) 1px, transparent 1px),
+    linear-gradient(150deg, rgba(72,176,255,.35) 1px, transparent 1px);
+
+  background-size: 70px 62px;
+  animation: techGridShift 24s linear infinite;
+}
+
+/* moving light overlay */
+.contact-tech::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 60% 40%, rgba(0,140,255,.15), transparent 60%);
+  animation: glowMove 10s ease-in-out infinite alternate;
+  pointer-events: none;
+
+}
+
+/* =====================================================
+   HEX BUTTON
+===================================================== */
+
+.hex-btn {
+  --hex-size: 150px;
+
+  position: absolute;
+  width: var(--hex-size);
+  height: calc(var(--hex-size) * 0.88);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  clip-path: polygon(25% 5%, 75% 5%, 97% 50%, 75% 95%, 25% 95%, 3% 50%);
+
+  border: 2px solid rgba(92,210,255,.75);
+
+  background: linear-gradient(145deg, #0f2f7a, #031b3f);
+
+  color: #ffffff;
+  font-size: 60px;
+  text-decoration: none;
+
+  box-shadow:
+    0 0 22px rgba(84,198,255,.35),
+    inset 0 0 20px rgba(255,215,0,.25);
+
+  transition:
+    transform .35s cubic-bezier(.22,1,.36,1),
+    box-shadow .35s,
+    border-color .35s,
+    color .35s;
+
+  /* FLOATING EFFECT */
+  animation: hexFloat 6s ease-in-out infinite;
+}
+
+/* inner border */
+.hex-btn::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  clip-path: inherit;
+  border: 2px solid rgba(160,230,255,.35);
+}
+
+/* hover interaction */
+.hex-btn:hover {
+  animation-play-state: paused;
+  transform: translateY(-10px) scale(1.06);
+  color: #ffc908;
+  border-color: #7ed8ff;
+
+  box-shadow:
+    0 0 45px rgba(92,210,255,.85),
+    inset 0 0 25px rgba(255,215,0,.35);
+}
+
+.hex-btn:active {
+  transform: translateY(-3px) scale(.98);
+}
+
+.hex-btn:focus-visible {
+  outline: 2px solid #9be6ff;
+  outline-offset: 4px;
+}
+
+/* ---------------- POSITIONING ---------------- */
+
+.hex-mail {
+  top: 16%;
+  left: 46%;
+  animation-delay: 0s;
+}
+
+.hex-call {
+  top: 36%;
+  left: 24%;
+  animation-delay: 1.2s;
+}
+
+.hex-at {
+  top: 36%;
+  left: 68%;
+  animation-delay: 2.4s;
+}
+
+.hex-whatsapp {
+  top: 58%;
+  left: 46%;
+  animation-delay: 3.6s;
+}
+
+/* =====================================================
+   GLOW EFFECTS
+===================================================== */
+
+.tech-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.glow-a {
+  width: 260px;
+  height: 260px;
+  top: 18%;
+  left: 38%;
+  background: radial-gradient(circle, rgba(95,214,255,.35), transparent);
+  animation: floatGlow 8s ease-in-out infinite;
+}
+
+.glow-b {
+  width: 180px;
+  height: 180px;
+  top: 50%;
+  left: 62%;
+  background: radial-gradient(circle, rgba(95,214,255,.25), transparent);
+  animation: floatGlow 10s ease-in-out infinite reverse;
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes techGridShift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-62px); }
+}
+
+@keyframes glowMove {
+  from { transform: translateX(-20px); }
+  to { transform: translateX(20px); }
+}
+
+/* floating motion */
+@keyframes hexFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes floatGlow {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+/* LAPTOP */
+@media (max-width: 1200px) {
+  .hex-btn {
+    --hex-size: 110px;
+    font-size: 40px;
+  }
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+
+  .contact-tech {
+    height: 340px;
+  }
+
+  .hex-btn {
+    --hex-size: 95px;
+    font-size: 32px;
+  }
+
+  .hex-mail { top: 12%; left: 44%; }
+  .hex-call { top: 36%; left: 18%; }
+  .hex-at { top: 36%; left: 66%; }
+  .hex-whatsapp { top: 60%; left: 44%; }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+
+  .contact-tech {
+    height: 300px;
+    border-radius: 18px;
+  }
+
+  .hex-btn {
+    --hex-size: 72px;
+    font-size: 24px;
+    border-width: 1.5px;
+    animation-duration: 8s;
+  }
+
+  .hex-mail { top: 10%; left: 42%; }
+  .hex-call { top: 38%; left: 14%; }
+  .hex-at { top: 38%; left: 70%; }
+  .hex-whatsapp { top: 66%; left: 42%; }
+
+  .glow-a { width: 180px; height: 180px; }
+  .glow-b { width: 120px; height: 120px; }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 400px) {
+
+  .contact-tech {
+    height: 260px;
+  }
+
+  .hex-btn {
+    --hex-size: 62px;
+    font-size: 20px;
+  }
+}

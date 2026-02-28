@@ -1,0 +1,115 @@
+/* Section */
+
+.location-section {
+  padding: 90px 20px;
+}
+
+
+/* Container */
+
+.location-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+
+/* Header */
+
+.location-header h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #222, #555);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.map-icon {
+  color: #ffd700;
+}
+
+.location-header p {
+  color: #000000;
+  font-size: 17px;
+  margin-bottom: 45px;
+  font-weight: 600;
+}
+
+
+/* List */
+
+.location-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+
+/* Chips */
+
+.location-list span {
+  padding: 9px 20px;
+
+  border-radius: 30px;
+
+  font-size: 16px;
+
+  background: rgba(255,255,255,0.7);
+
+  border: 1px solid rgba(255,215,0,0.3);
+
+  cursor: pointer;
+
+  backdrop-filter: blur(6px);
+
+  transition: all 0.35s ease;
+}
+
+
+/* Hover */
+
+.location-list span:hover {
+  background: rgba(255,215,0,0.1);
+  border-color: #ffd700;
+  color: #b8860b;
+
+  transform: translateY(-4px) scale(1.05);
+
+  box-shadow: 0 10px 25px rgba(255,215,0,0.4);
+}
+
+
+/* Main Locations */
+
+.location-main {
+  font-weight: 600;
+
+  background: linear-gradient(
+    135deg,
+    #ffd700,
+    #ffb700
+  ) !important;
+
+  color: #000 !important;
+
+  border: none !important;
+
+  box-shadow: 0 6px 18px rgba(255,215,0,0.6);
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+  .location-header h2 {
+    font-size: 30px;
+  }
+
+}

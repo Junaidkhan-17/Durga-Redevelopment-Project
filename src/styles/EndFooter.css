@@ -1,0 +1,94 @@
+/* ===============================
+   End Footer Section
+================================ */
+
+.end-footer {
+  background: #000;
+  padding: 80px 6%;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Container */
+
+.end-footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* Blocks */
+
+.end-footer-block {
+  line-height: 1.7;
+}
+
+/* Headings */
+
+.end-footer-block h3 {
+  color: #ffc107;
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+/* Paragraphs */
+
+.end-footer-block p {
+  color: #e0e0e0;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+/* List */
+
+.end-footer-block ul {
+  padding-left: 20px;
+  margin-bottom: 14px;
+}
+
+.end-footer-block ul li {
+  color: #e0e0e0;
+  font-size: 15px;
+  margin-bottom: 6px;
+  list-style: disc;
+}
+
+/* Hover Effect */
+
+.end-footer-block:hover h3 {
+  color: #ffb300;
+}
+
+.end-footer-block:hover {
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+}
+
+/* ===============================
+   Responsive
+================================ */
+
+@media (max-width: 900px) {
+  .end-footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .end-footer {
+    padding: 60px 5%;
+  }
+
+  .end-footer-block h3 {
+    font-size: 20px;
+  }
+
+  .end-footer-block p,
+  .end-footer-block ul li {
+    font-size: 14px;
+  }
+}
