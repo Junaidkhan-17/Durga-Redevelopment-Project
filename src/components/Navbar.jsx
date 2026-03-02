@@ -35,8 +35,8 @@ function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/services", label: "Services" },
-    { href: "/durga-shield", label: "Durga Shield" },
     { href: "/knowledge-hub", label: "Knowledge Hub" },
+    { href: "/durga-shield", label: "Durga Shield" },
     { href: "/contact-page", label: "Contact" },
   ];
 
@@ -115,7 +115,7 @@ function Navbar() {
           <section className="nav-page-left">
             <div className="contact-block">
               <h3>Get in Touch</h3>
-              <a href="tel:+919876543210"><i className="bi bi-telephone"></i> +91 98765 43210</a>
+              <a href="tel:+917507002255"><i className="bi bi-telephone"></i> +91 7507002255</a>
               <a href="mailto:hello@durgaredevelopment.com"><i className="bi bi-envelope"></i> hello@durgaredevelopment.com</a>
             </div>
 
@@ -166,19 +166,7 @@ function Navbar() {
               </div>
             </div>
 
-            <div className="menu-video-section">
-              <h4>Latest Video</h4>
-              <div className="menu-video-wrap">
-                <iframe
-                  title="Durga Developers Video"
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
+            
           </section>
         </div>
       </div>
