@@ -4,14 +4,14 @@
   overflow-x: hidden;
   overflow-y: visible;
   min-height: 100vh;
-  background: #0f2b4c;
+  background: #0b2d54;
 }
 
 .herobuilding2 {
   position: absolute;
   inset: 0;
   background-repeat: no-repeat;
-  background-position: 62% center;
+  background-position: 70% center;
   background-size: cover;
   z-index: -2;
   pointer-events: none;
@@ -22,12 +22,12 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    90deg,
+    95deg,
     rgba(8, 24, 46, 0.92) 0%,
     rgba(10, 30, 56, 0.8) 32%,
     rgba(13, 38, 68, 0.45) 48%,
     rgba(15, 43, 76, 0.16) 60%,
-    rgba(15, 43, 76, 0) 72%
+    rgba(6, 25, 47, 0) 72%
   );
   background-repeat: no-repeat;
   background-position: left center;
@@ -63,18 +63,18 @@
   font-weight: 600;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #121212;
+   color: #ffffff !important;
   background: #ffc107;
   border-radius: 999px;
   padding: 7px 14px;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
 }
 
 .hero-section h1 {
   font-size: 62px;
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 14px;
+  margin-bottom: 24px;
 }
 
 .hero-section span {
@@ -82,16 +82,19 @@
 }
 
 .hero-section h3 {
-  font-size: 20px;
+  font-size: 30px;
   line-height: 1.4;
   max-width: 640px;
+
 }
 
 .hero-section p {
-  margin-top: 12px;
+  margin-top: 32px;
   max-width: 620px;
-  color: #ececec;
-  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
 .glass-form {
@@ -242,7 +245,8 @@
   }
 
   .hero-section h3 {
-    font-size: 18px;
+    font-size: 25px;
+      font-weight: 500;
   }
 
   .hero-section p {
@@ -272,16 +276,18 @@
   }
 
   .hero-section h1 {
-    font-size: 32px;
+    font-size: 35px;
   }
 
   .hero-section h3 {
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .hero-section p {
-    font-size: 14px;
+    font-size: 12px;
   }
+
+
 
   .problem-card,
   .solution-card-home,
