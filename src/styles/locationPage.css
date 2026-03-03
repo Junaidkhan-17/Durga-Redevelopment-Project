@@ -1,4 +1,4 @@
-﻿.location-page {
+.location-page {
   background: #fff;
   padding-top: 72px;
 }
@@ -70,7 +70,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.location-gallery img:hover {
+.location-gallery img:is(:hover, :active) {
   transform: scale(1.04);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
 }
@@ -102,7 +102,7 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.testimonial-card:hover {
+.testimonial-card:is(:hover, :active) {
   transform: translateY(-5px);
   box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
 }
@@ -177,7 +177,7 @@
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.location-contact-form .form-control:hover {
+.location-contact-form .form-control:is(:hover, :active) {
   border-color: #f0c66f;
   transform: translateY(-1px);
 }
@@ -262,3 +262,4 @@
     padding: 14px;
   }
 }
+

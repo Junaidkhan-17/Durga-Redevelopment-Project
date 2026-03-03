@@ -44,10 +44,10 @@ function Hero() {
 
       <div className="hero-overlay">
         <div className="container-fluid hero-container">
-          <div className="row align-items-center mb-5">
+          <div className="row align-items-center hero-row">
 
             {/* LEFT CONTENT */}
-            <div className="col-lg-7 text-white mb-4 mb-lg-0">
+            <div className="col-lg-7 text-white mb-4 mb-lg-0 hero-content-col">
 
               <p className="hero-badge">
                 Nagpur’s First 360° Redevelopment Ecosystem
@@ -59,11 +59,11 @@ function Hero() {
                 <span>Preserve Your Legacy</span>
               </h1>
 
-              <h3 className="mt-3">
+              <h3>
                 Don’t just rebuild. Upgrade.
               </h3>
 
-              <p className="mt-3">
+              <p>
                 We act as your project’s Shield — from legal vetting
                 and builder selection to quality audits and final
                 possession. One expert team. Total transparency.

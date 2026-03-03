@@ -186,12 +186,12 @@
   margin: 0;
 }
 
-.durga-shield-page .durga-process-item:hover .durga-process-circle-wrap {
+.durga-shield-page .durga-process-item:is(:hover, :active) .durga-process-circle-wrap {
   transform: translateY(-8px);
   box-shadow: 0 20px 0 rgba(0, 0, 0, 0.2), 0 36px 40px rgba(0, 0, 0, 0.26);
 }
 
-.durga-shield-page .durga-process-item:hover .durga-process-icon {
+.durga-shield-page .durga-process-item:is(:hover, :active) .durga-process-icon {
   transform: scale(1.08) rotate(5deg);
 }
 
@@ -287,14 +287,14 @@
   transition: transform 0.55s ease;
 }
 
-.durga-shield-page .hero-point-card:hover {
+.durga-shield-page .hero-point-card:is(:hover, :active) {
   transform: translateY(-6px) scale(1.01);
   border-color: rgba(255, 211, 79, 0.7);
   background: linear-gradient(135deg, rgba(8, 30, 64, 0.72), rgba(21, 66, 118, 0.56));
   box-shadow: 0 14px 24px rgba(5, 17, 39, 0.34);
 }
 
-.durga-shield-page .hero-point-card:hover::before {
+.durga-shield-page .hero-point-card:is(:hover, :active)::before {
   transform: translateX(130%);
 }
 
@@ -320,8 +320,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
-.durga-shield-page .hero-section .btn-warning:hover,
-.durga-shield-page .cta-section .btn-warning:hover {
+.durga-shield-page .hero-section .btn-warning:is(:hover, :active),
+.durga-shield-page .cta-section .btn-warning:is(:hover, :active) {
   transform: translateY(-4px) scale(1.02);
   filter: brightness(1.03);
   box-shadow: 0 18px 26px rgba(255, 190, 11, 0.38);
@@ -369,15 +369,15 @@
   pointer-events: none;
 }
 
-.durga-shield-page .feature-box:hover,
-.durga-shield-page .benefit-card:hover {
+.durga-shield-page .feature-box:is(:hover, :active),
+.durga-shield-page .benefit-card:is(:hover, :active) {
   transform: translateY(-10px);
   border-color: rgba(255, 190, 11, 0.7);
   box-shadow: 0 18px 30px rgba(16, 52, 98, 0.26);
 }
 
-.durga-shield-page .feature-box:hover::before,
-.durga-shield-page .benefit-card:hover::before {
+.durga-shield-page .feature-box:is(:hover, :active)::before,
+.durga-shield-page .benefit-card:is(:hover, :active)::before {
   transform: translateX(120%);
 }
 
@@ -396,7 +396,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.durga-shield-page .feature-box:hover .icon {
+.durga-shield-page .feature-box:is(:hover, :active) .icon {
   transform: rotate(8deg) scale(1.08);
   box-shadow: 0 12px 24px rgba(255, 190, 11, 0.4);
 }
@@ -463,23 +463,23 @@
   font-family: "Montserrat", Arial, sans-serif;
 }
 
-.durga-shield-page .process-card:hover {
+.durga-shield-page .process-card:is(:hover, :active) {
   transform: translateY(-12px) scale(1.025);
   border-color: rgba(255, 211, 79, 0.9);
   background: linear-gradient(155deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.11));
   box-shadow: 0 24px 38px rgba(255, 190, 11, 0.22), 0 20px 32px rgba(2, 10, 28, 0.4);
 }
 
-.durga-shield-page .process-card:hover::before {
+.durga-shield-page .process-card:is(:hover, :active)::before {
   transform: translateX(130%);
 }
 
-.durga-shield-page .process-card:hover::after {
+.durga-shield-page .process-card:is(:hover, :active)::after {
   border-color: rgba(255, 211, 79, 0.72);
   box-shadow: inset 0 0 0 1px rgba(255, 211, 79, 0.25), 0 0 24px rgba(255, 211, 79, 0.28);
 }
 
-.durga-shield-page .process-card:hover .process-icon {
+.durga-shield-page .process-card:is(:hover, :active) .process-icon {
   transform: rotate(10deg) scale(1.12);
   filter: saturate(1.08);
   box-shadow: 0 14px 28px rgba(255, 190, 11, 0.5);
@@ -534,7 +534,7 @@
   transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
 }
 
-.durga-shield-page .section-img:hover {
+.durga-shield-page .section-img:is(:hover, :active) {
   transform: translateY(-8px) scale(1.01);
 
 }
@@ -562,7 +562,7 @@
   font-family: "Montserrat", Arial, sans-serif;
 }
 
-.durga-shield-page .tech-list li:hover {
+.durga-shield-page .tech-list li:is(:hover, :active) {
   transform: translateX(8px);
   border-color: rgba(255, 190, 11, 0.55);
   background: rgba(255, 255, 255, 0.9);
@@ -653,17 +653,17 @@
   pointer-events: none;
 }
 
-.durga-shield-page .pillar-card:hover {
+.durga-shield-page .pillar-card:is(:hover, :active) {
   transform: translateY(-10px) scale(1.02);
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08));
   box-shadow: 0 20px 34px rgba(4, 14, 38, 0.46), 0 0 20px rgba(255, 211, 79, 0.24);
 }
 
-.durga-shield-page .pillar-card:hover::before {
+.durga-shield-page .pillar-card:is(:hover, :active)::before {
   opacity: 1;
 }
 
-.durga-shield-page .pillar-card:hover::after {
+.durga-shield-page .pillar-card:is(:hover, :active)::after {
   transform: translateX(135%);
 }
 
@@ -706,18 +706,18 @@
   transition: transform 0.25s ease, color 0.25s ease;
 }
 
-.durga-shield-page .pillar-card:hover .pillar-icon {
+.durga-shield-page .pillar-card:is(:hover, :active) .pillar-icon {
   transform: translateY(-2px) scale(1.1) rotate(6deg);
   color: #ffe27c;
   text-shadow: 0 0 14px rgba(255, 211, 79, 0.35);
 }
 
-.durga-shield-page .pillar-card:hover h5 {
+.durga-shield-page .pillar-card:is(:hover, :active) h5 {
   transform: translateY(-2px);
   color: #fff1b9;
 }
 
-.durga-shield-page .pillar-card:hover li {
+.durga-shield-page .pillar-card:is(:hover, :active) li {
   transform: translateX(4px);
   color: #ffffff;
 }
@@ -1287,3 +1287,4 @@
     transition: none;
   }
 }
+

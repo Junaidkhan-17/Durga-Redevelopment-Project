@@ -159,8 +159,13 @@ function ProblemSolution() {
             </div>
 
             <div className="ps-controls">
-              <button type="button" className="ps-nav-pill" onClick={handlePrevious}>
-                &#8592; Previous
+              <button
+                type="button"
+                className="ps-chevron-btn ps-chevron-prev"
+                aria-label="Previous project story"
+                onClick={handlePrevious}
+              >
+                <span className="ps-chevron-mark" aria-hidden="true"></span>
               </button>
 
               <div className="ps-dots" aria-label="Image slider pagination">
@@ -175,8 +180,13 @@ function ProblemSolution() {
                 ))}
               </div>
 
-              <button type="button" className="ps-nav-pill" onClick={handleNext}>
-                Next &#8594;
+              <button
+                type="button"
+                className="ps-chevron-btn ps-chevron-next"
+                aria-label="Next project story"
+                onClick={handleNext}
+              >
+                <span className="ps-chevron-mark" aria-hidden="true"></span>
               </button>
             </div>
           </div>

@@ -86,7 +86,7 @@
 }
 
 /* Hover */
-.location-list span:hover {
+.location-list span:is(:hover, :active) {
   background: rgba(255,215,0,0.1);
   border-color: #ffd700;
   color: #b8860b;
@@ -168,7 +168,7 @@
     font-size: 14px;
   }
 
-  .location-list span:hover {
+  .location-list span:is(:hover, :active) {
     transform: translateY(-3px) scale(1.03);
   }
 }
@@ -220,3 +220,4 @@
     font-size: 12px;
   }
 }
+

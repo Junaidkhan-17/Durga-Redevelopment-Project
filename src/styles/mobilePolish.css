@@ -1,0 +1,206 @@
+@media (max-width: 992px) {
+  :root {
+    --m-space: 2.9rem;
+    --m-radius: 16px;
+    --m-shadow: 0 12px 26px rgba(14, 34, 62, 0.14);
+  }
+
+  .ps-section,
+  .services-section,
+  .shield-section,
+  .different-section,
+  .ready-section,
+  .location-section,
+  .partners-section,
+  .contact-section,
+  .logo-slider-section,
+  .solutions-section,
+  .contact-page-main,
+  .contact-page-offices,
+  .estimate-section,
+  .estimate-info,
+  .estimate-faq,
+  .kh-section,
+  .kh-cta,
+  .perks-section,
+  .auth-page,
+  .design-expert-page,
+  .location-page {
+    padding-top: var(--m-space) !important;
+    padding-bottom: var(--m-space) !important;
+  }
+
+  .section-title,
+  .ps-title,
+  .ready-title,
+  .different-title,
+  .shield-title {
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  .ps-box,
+  .ps-img-card,
+  .service-card,
+  .solution-card,
+  .shield-card,
+  .different-card,
+  .ready-box,
+  .partner-card,
+  .contact-form-wrap,
+  .map-wrap,
+  .contact-page-form-wrap,
+  .contact-page-map-wrap,
+  .contact-office-card,
+  .estimate-card,
+  .info-card,
+  .faq-item,
+  .kh-card,
+  .kh-category-card,
+  .kh-guide-card,
+  .process-card,
+  .benefit-card,
+  .pillar-card,
+  .feature-box,
+  .testimonial-card,
+  .auth-card,
+  .design-expert-form-card,
+  .perk-card {
+    border-radius: var(--m-radius) !important;
+    box-shadow: var(--m-shadow) !important;
+  }
+
+  .contact-grid,
+  .contact-page-main-grid,
+  .contact-office-grid,
+  .estimate-grid,
+  .kh-cards-grid,
+  .kh-category-grid,
+  .kh-bite-grid,
+  .perks-grid,
+  .different-grid,
+  .shield-grid,
+  .ready-grid,
+  .services-grid {
+    gap: 14px !important;
+  }
+
+  .contact-input,
+  .form-control,
+  .auth-input,
+  input,
+  textarea,
+  select {
+    min-height: 44px;
+    border-radius: 10px !important;
+  }
+
+  .btn,
+  .estimate-btn,
+  .submit-btn,
+  .hero-btn,
+  .ready-btn,
+  .different-btn,
+  .shield-btn,
+  .service-btn,
+  .contact-submit-btn,
+  .kh-cta-btn {
+    min-height: 44px;
+    border-radius: 12px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --m-space: 2.5rem;
+    --m-radius: 14px;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 8vw, 2.2rem) !important;
+  }
+
+  h2 {
+    font-size: clamp(1.35rem, 6vw, 1.85rem) !important;
+  }
+
+  p,
+  li,
+  .section-desc,
+  .ps-subtitle {
+    line-height: 1.6;
+  }
+
+  .ps-img,
+  .kh-img,
+  .section-img,
+  .location-gallery img,
+  .service-img img {
+    border-radius: 12px !important;
+  }
+
+  .ps-controls,
+  .menu-link-list,
+  .menu-location-list,
+  .footer-social-row {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --m-space: 2.1rem;
+    --m-radius: 12px;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .ps-box,
+  .service-card,
+  .solution-card,
+  .shield-card,
+  .different-card,
+  .ready-box,
+  .partner-card,
+  .contact-form-wrap,
+  .map-wrap,
+  .contact-page-form-wrap,
+  .contact-page-map-wrap,
+  .contact-office-card,
+  .estimate-card,
+  .info-card,
+  .faq-item,
+  .kh-card,
+  .kh-category-card,
+  .kh-guide-card,
+  .process-card,
+  .benefit-card,
+  .pillar-card,
+  .feature-box,
+  .testimonial-card,
+  .auth-card,
+  .design-expert-form-card,
+  .perk-card {
+    padding: 14px !important;
+  }
+
+  .contact-page-hero,
+  .estimate-hero,
+  .kh-hero,
+  .services-hero-section {
+    padding-top: 88px !important;
+  }
+
+  .hero-section .btn,
+  .contact-page-main .contact-submit-btn,
+  .estimate-page .estimate-btn,
+  .design-expert-page .submit-btn,
+  .cta-section .btn,
+  .kh-cta .kh-cta-btn {
+    width: 100%;
+  }
+}

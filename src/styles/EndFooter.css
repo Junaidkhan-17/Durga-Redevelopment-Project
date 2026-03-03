@@ -58,11 +58,11 @@
 
 /* Hover Effect */
 
-.end-footer-block:hover h3 {
+.end-footer-block:is(:hover, :active) h3 {
   color: #ffb300;
 }
 
-.end-footer-block:hover {
+.end-footer-block:is(:hover, :active) {
   transform: translateY(-2px);
   transition: 0.3s ease;
 }

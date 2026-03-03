@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
+import GlobalTouchFeedback from './components/GlobalTouchFeedback'
 
 // Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -9,9 +10,11 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // Main CSS
 import './styles/main.css'
+import './styles/mobilePolish.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <GlobalTouchFeedback />
     <App />
   </React.StrictMode>
 )

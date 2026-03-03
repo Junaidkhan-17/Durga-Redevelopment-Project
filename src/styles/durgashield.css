@@ -120,14 +120,14 @@
   transition: 0.4s;
 }
 
-.shield-card:hover::before {
+.shield-card:is(:hover, :active)::before {
   opacity: 1;
 }
 
 
 /* Hover */
 
-.shield-card:hover {
+.shield-card:is(:hover, :active) {
   transform: translateY(-12px) scale(1.05);
   border-color: #ffd700;
   box-shadow: 0 25px 50px rgba(255,215,0,0.4);
@@ -145,7 +145,7 @@
   transition: all 0.4s ease;
 }
 
-.shield-card:hover .shield-icon {
+.shield-card:is(:hover, :active) .shield-icon {
   transform: scale(1.4) rotate(10deg);
   text-shadow: 0 0 18px rgba(255,215,0,1);
 }
@@ -181,7 +181,7 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.shield-btn:hover {
+.shield-btn:is(:hover, :active) {
   background: #ffd700;
   color: #000;
   box-shadow: 0 0 30px rgba(255,215,0,0.9);
@@ -261,7 +261,7 @@
     border-radius: 14px;
   }
 
-  .shield-card:hover {
+  .shield-card:is(:hover, :active) {
     transform: translateY(-6px);
   }
 
@@ -362,3 +362,4 @@
     font-size: 13px;
   }
 }
+

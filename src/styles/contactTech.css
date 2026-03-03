@@ -86,7 +86,7 @@
 }
 
 /* hover interaction */
-.hex-btn:hover {
+.hex-btn:is(:hover, :active) {
   animation-play-state: paused;
   transform: translateY(-10px) scale(1.06);
   color: #ffc908;

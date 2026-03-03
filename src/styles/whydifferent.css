@@ -127,14 +127,14 @@
   transition: 0.5s;
 }
 
-.different-card:hover::before {
+.different-card:is(:hover, :active)::before {
   opacity: 1;
 }
 
 
 /* Hover: 3D Lift */
 
-.different-card:hover {
+.different-card:is(:hover, :active) {
   transform:
     translateY(-15px)
     rotateX(6deg)
@@ -157,7 +157,7 @@
   transition: all 0.5s ease;
 }
 
-.different-card:hover .different-icon {
+.different-card:is(:hover, :active) .different-icon {
   transform: translateZ(30px) scale(1.4);
   text-shadow: 0 0 25px gold;
 }
@@ -232,7 +232,7 @@
   transition: 0.5s;
 }
 
-.different-btn:hover::before {
+.different-btn:is(:hover, :active)::before {
   opacity: 1;
   transform: scale(2);
 }
@@ -240,7 +240,7 @@
 
 /* Button Hover */
 
-.different-btn:hover {
+.different-btn:is(:hover, :active) {
   transform: translateY(-4px) scale(1.05);
 
   box-shadow:
@@ -317,7 +317,7 @@
     border-radius: 16px;
   }
 
-  .different-card:hover {
+  .different-card:is(:hover, :active) {
     transform: translateY(-8px);
   }
 
@@ -419,3 +419,4 @@
     font-size: 13px;
   }
 }
+

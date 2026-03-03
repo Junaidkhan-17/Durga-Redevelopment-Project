@@ -53,7 +53,7 @@
   animation: logoMove 22s linear infinite;
 }
 
-.logo-marquee:hover .partners-logo-track {
+.logo-marquee:is(:hover, :active) .partners-logo-track {
   animation-play-state: paused;
 }
 
@@ -81,7 +81,7 @@
   }
 }
 
-.logo-tile:hover {
+.logo-tile:is(:hover, :active) {
   transform: translateY(-4px) scale(1.03);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
 }
@@ -116,7 +116,7 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.partner-card:hover {
+.partner-card:is(:hover, :active) {
   transform: translateY(-5px);
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.1);
 }
@@ -253,7 +253,7 @@
     padding: 16px;
   }
 
-  .partner-card:hover {
+  .partner-card:is(:hover, :active) {
     transform: translateY(-3px);
   }
 }
@@ -339,3 +339,4 @@
     max-height: 28px;
   }
 }
+

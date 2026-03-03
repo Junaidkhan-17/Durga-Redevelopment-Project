@@ -1,4 +1,4 @@
-﻿.footer {
+.footer {
   background: radial-gradient(circle, rgba(0, 0, 0, 0.899), rgb(0, 0, 0), rgb(0, 0, 0));
   color: #fff;
   padding: 56px 0 20px;
@@ -96,7 +96,7 @@
   }
 }
 
-.footer-social-row a:hover {
+.footer-social-row a:is(:hover, :active) {
   background: #ffc107;
   color: #111;
   border-color: #ffc107;
@@ -126,7 +126,7 @@
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.footer-link-group a:hover {
+.footer-link-group a:is(:hover, :active) {
   color: #ffc107;
   transform: translateX(3px);
 }
@@ -350,3 +350,4 @@
     width: 70px;
   }
 }
+

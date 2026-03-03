@@ -1,4 +1,4 @@
-﻿/* ===============================
+/* ===============================
    GLOBAL
 ================================ */
 
@@ -108,7 +108,7 @@
   transition: 0.3s;
 }
 
-.hero-btn:hover {
+.hero-btn:is(:hover, :active) {
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(255, 193, 7, 0.6);
 }
@@ -128,7 +128,7 @@
   transition: 0.3s;
 }
 
-.design-expert-form-card:hover {
+.design-expert-form-card:is(:hover, :active) {
   transform: translateY(-6px);
 }
 
@@ -198,7 +198,7 @@
   transition: 0.3s;
 }
 
-.submit-btn:hover {
+.submit-btn:is(:hover, :active) {
   transform: translateY(-2px);
   box-shadow: 0 8px 26px rgba(255, 193, 7, 0.7);
 }
@@ -242,7 +242,7 @@
   transition: 0.25s;
 }
 
-.perks-tabs button:hover {
+.perks-tabs button:is(:hover, :active) {
   background: #ffe9a3;
 }
 
@@ -294,7 +294,7 @@
   transition: 0.3s;
 }
 
-.perk-card:hover {
+.perk-card:is(:hover, :active) {
   transform: translateY(-8px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
 }

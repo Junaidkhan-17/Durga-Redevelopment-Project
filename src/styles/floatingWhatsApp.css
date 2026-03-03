@@ -17,7 +17,7 @@
   transition: transform 0.25s ease;
 }
 
-.floating-whatsapp:hover {
+.floating-whatsapp:is(:hover, :active) {
   transform: scale(1.08);
   color: #fff;
 }
@@ -45,3 +45,4 @@
     font-size: 28px;
   }
 }
+

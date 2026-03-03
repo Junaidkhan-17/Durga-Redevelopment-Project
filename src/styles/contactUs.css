@@ -1,6 +1,8 @@
 .contact-section {
   padding: 90px 0;
-  background: #fff;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255, 193, 7, 0.14), transparent 36%),
+    #fff;
 }
 
 .contact-header {
@@ -34,6 +36,7 @@
   border: 1px solid #f1deb0;
   border-radius: 14px;
   padding: 24px;
+  box-shadow: 0 12px 28px rgba(22, 34, 56, 0.08);
 }
 
 .contact-form-wrap h3,
@@ -81,5 +84,11 @@
 
   .map-wrap iframe {
     min-height: 260px;
+  }
+
+  .contact-form-wrap,
+  .map-wrap {
+    padding: 16px;
+    border-radius: 12px;
   }
 }

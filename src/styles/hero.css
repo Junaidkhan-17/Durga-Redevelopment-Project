@@ -3,7 +3,7 @@
   isolation: isolate;
   overflow-x: hidden;
   overflow-y: visible;
-  min-height: 100vh;
+  min-height: 100svh;
   background: #0b2d54;
 }
 
@@ -44,22 +44,30 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100svh;
   height: auto;
   background: transparent;
   display: flex;
-  align-items: flex-start;
-  padding: 100px 0 90px;
+  align-items: center;
+  padding: clamp(96px, 12vh, 132px) 0 clamp(40px, 6vh, 72px);
 }
 
 .hero-container {
-  padding-left: 8vw;
+  padding-left: clamp(18px, 10vw, 110px);
   padding-right: 4vw;
+}
+
+.hero-row {
+  margin-bottom: 0 !important;
+}
+
+.hero-content-col {
+  padding-left: clamp(12px, 2vw, 28px);
 }
 
 .hero-badge {
   display: inline-block;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -71,10 +79,10 @@
 }
 
 .hero-section h1 {
-  font-size: 62px;
+  font-size: clamp(2.1rem, 5vw, 3.85rem);
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 24px;
+  margin-bottom: 38px;
 }
 
 .hero-section span {
@@ -82,19 +90,22 @@
 }
 
 .hero-section h3 {
-  font-size: 30px;
+  font-size: clamp(1.25rem, 2.2vw, 1.9rem);
   line-height: 1.4;
   max-width: 640px;
-
+  margin-top: 14px;
+  margin-bottom: 10px;
 }
 
-.hero-section p {
-  margin-top: 32px;
+.hero-content-col > p:not(.hero-badge) {
+  margin-top: 34px;
+  margin-bottom: 0;
   max-width: 620px;
   color: rgb(255, 255, 255);
-  font-size: 20px;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  line-height: 1.6;
 }
 
 .glass-form {
@@ -228,7 +239,7 @@
   }
 }
 
-.feature-box-item:hover {
+.feature-box-item:is(:hover, :active) {
   transform: translateY(-6px);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
 }
@@ -249,12 +260,12 @@
 
 @media (max-width: 992px) {
   .hero-overlay {
-    min-height: 100vh;
-    padding: 92px 0 70px;
+    min-height: 100svh;
+    padding: clamp(86px, 13vh, 108px) 0 50px;
   }
 
   .hero-container {
-    padding-left: 24px;
+    padding-left: 28px;
     padding-right: 24px;
   }
 
@@ -263,18 +274,24 @@
   }
 
   .hero-section h1 {
-    font-size: 46px;
+    font-size: clamp(2rem, 6vw, 2.8rem);
+  }
+
+  .hero-content-col {
+    padding-left: 10px;
   }
 
   .hero-section h3 {
-    font-size: 25px;
+    font-size: clamp(1.2rem, 3.2vw, 1.5rem);
     font-weight: 500;
+    margin-top: 12px;
   }
 
-  .hero-section p {
+  .hero-content-col > p:not(.hero-badge) {
     margin-left: auto;
     margin-right: auto;
-    font-size: 18px;
+    font-size: 1rem;
+    margin-top: 20px;
   }
 
   .hero-badge {
@@ -293,26 +310,38 @@
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+  }
+
   .hero-overlay {
-    min-height: 100vh;
-    padding: 84px 0 56px;
+    min-height: auto;
+    padding: 82px 0 28px;
+    align-items: flex-start;
   }
 
   .hero-container {
-    padding-left: 16px;
+    padding-left: 20px;
     padding-right: 16px;
   }
 
   .hero-section h1 {
-    font-size: 38px;
+    font-size: clamp(1.9rem, 8vw, 2.4rem);
+    margin-bottom: 20px;
+  }
+
+  .hero-content-col {
+    padding-left: 8px;
   }
 
   .hero-section h3 {
-    font-size: 22px;
+    font-size: clamp(1.1rem, 4.8vw, 1.35rem);
+    margin-top: 14px;
   }
 
-  .hero-section p {
-    font-size: 16px;
+  .hero-content-col > p:not(.hero-badge) {
+    font-size: 0.98rem;
+    margin-top: 22px;
   }
 
   .hero-badge {
@@ -334,27 +363,38 @@
 }
 
 @media (max-width: 576px) {
+  .hero-section {
+    min-height: auto;
+  }
+
   .hero-overlay {
-    min-height: 100vh;
-    padding: 76px 0 48px;
+    min-height: auto;
+    padding: 74px 0 22px;
+    align-items: flex-start;
   }
 
   .hero-container {
-    padding-left: 14px;
+    padding-left: 18px;
     padding-right: 14px;
   }
 
   .hero-section h1 {
-    font-size: 32px;
+    font-size: clamp(1.7rem, 9vw, 2.05rem);
+    margin-bottom: 18px;
+  }
+
+  .hero-content-col {
+    padding-left: 6px;
   }
 
   .hero-section h3 {
-    font-size: 20px;
+    font-size: clamp(1rem, 5.4vw, 1.22rem);
+    margin-top: 12px;
   }
 
-  .hero-section p {
-    font-size: 15px;
-    margin-top: 24px;
+  .hero-content-col > p:not(.hero-badge) {
+    font-size: 0.94rem;
+    margin-top: 18px;
   }
 
   .problem-card,
@@ -370,27 +410,38 @@
 }
 
 @media (max-width: 400px) {
+  .hero-section {
+    min-height: auto;
+  }
+
   .hero-overlay {
-    min-height: 100vh;
-    padding: 70px 0 40px;
+    min-height: auto;
+    padding: 68px 0 18px;
+    align-items: flex-start;
   }
 
   .hero-container {
-    padding-left: 12px;
+    padding-left: 16px;
     padding-right: 12px;
   }
 
   .hero-section h1 {
-    font-size: 28px;
+    font-size: clamp(1.56rem, 9.4vw, 1.8rem);
+    margin-bottom: 16px;
+  }
+
+  .hero-content-col {
+    padding-left: 4px;
   }
 
   .hero-section h3 {
-    font-size: 18px;
+    font-size: clamp(0.95rem, 5.8vw, 1.06rem);
+    margin-top: 10px;
   }
 
-  .hero-section p {
-    font-size: 14px;
-    margin-top: 20px;
+  .hero-content-col > p:not(.hero-badge) {
+    font-size: 0.9rem;
+    margin-top: 16px;
   }
 
   .hero-badge {

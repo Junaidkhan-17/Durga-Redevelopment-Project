@@ -89,7 +89,7 @@
   }
 }
 
-.hamburger-btn:hover {
+.hamburger-btn:is(:hover, :active) {
   transform: translateY(-2px);
   border-color: rgba(212, 175, 55, 0.8);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
@@ -139,7 +139,7 @@
   }
 }
 
-.profile-icon:hover {
+.profile-icon:is(:hover, :active) {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.16);
   border-color: rgba(212, 175, 55, 0.85);
@@ -161,7 +161,7 @@
   box-shadow: 0 10px 24px rgba(212, 175, 55, 0.35);
 }
 
-.custom-navbar .btn-warning:hover,
+.custom-navbar .btn-warning:is(:hover, :active),
 .custom-navbar .btn-warning:focus {
   background: linear-gradient(130deg, #ffd35e, #deaa2b);
   border-color: #deaa2b;
@@ -244,7 +244,7 @@
   transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease;
 }
 
-.contact-block a:hover {
+.contact-block a:is(:hover, :active) {
   color: #0d1420;
   background: #e8edf6;
   transform: translateX(3px);
@@ -266,7 +266,7 @@
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
 }
 
-.office-card:hover {
+.office-card:is(:hover, :active) {
   transform: translateY(-4px);
   border-color: #f1ca65;
   box-shadow: 0 14px 24px rgba(0, 0, 0, 0.11);
@@ -332,7 +332,7 @@
   transition: transform 0.22s ease, background 0.22s ease;
 }
 
-.nav-close-btn:hover {
+.nav-close-btn:is(:hover, :active) {
   transform: rotate(90deg);
   background: #111827;
 }
@@ -402,17 +402,17 @@
   transition: all 0.22s ease;
 }
 
-.menu-link-list a:hover {
+.menu-link-list a:is(:hover, :active) {
   color: #0f1726;
   border-color: #f0cb6c;
   padding-left: 22px;
 }
 
-.menu-link-list a:hover::before {
+.menu-link-list a:is(:hover, :active)::before {
   width: 100%;
 }
 
-.menu-link-list a:hover::after {
+.menu-link-list a:is(:hover, :active)::after {
   opacity: 1;
   transform: translateY(-50%) translateX(0);
 }
@@ -467,7 +467,7 @@
   }
 }
 
-.menu-location-grid a:hover {
+.menu-location-grid a:is(:hover, :active) {
   background: #fff8e4;
   border-color: var(--navbar-accent);
   transform: translateY(-2px);
@@ -524,8 +524,14 @@
   }
 
   .nav-page-left {
+    order: 2;
     border-right: 0;
-    border-bottom: 1px solid #d9e1ec;
+    border-bottom: 0;
+    border-top: 1px solid #d9e1ec;
+  }
+
+  .nav-page-right {
+    order: 1;
   }
 
   .contact-block h3 {
@@ -798,3 +804,4 @@
     font-size: 0.85rem;
   }
 }
+

@@ -16,6 +16,12 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --mobile-section-gap: 52px;
+  --mobile-card-radius: 14px;
+  --mobile-card-shadow: 0 10px 24px rgba(13, 28, 51, 0.12);
+}
+
 #root {
   width: 100%;
   overflow-x: hidden;
@@ -34,11 +40,11 @@ button,
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.btn:hover,
-button:hover,
-.services-btn:hover,
-.vr-btn:hover,
-.knowledge-link:hover {
+.btn:is(:hover, :active),
+button:is(:hover, :active),
+.services-btn:is(:hover, :active),
+.vr-btn:is(:hover, :active),
+.knowledge-link:is(:hover, :active) {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
 }
@@ -58,6 +64,13 @@ button:focus-visible,
 .knowledge-link:focus-visible {
   outline: 2px solid rgba(255, 193, 7, 0.7);
   outline-offset: 2px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .touch-active {
+    transform: translateY(-2px) scale(0.99) !important;
+    filter: brightness(1.03);
+  }
 }
 
 img {
@@ -114,6 +127,91 @@ iframe {
   }
 }
 
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 72px;
+  }
+
+  .ps-section,
+  .services-section,
+  .shield-section,
+  .different-section,
+  .ready-section,
+  .location-section,
+  .partners-section,
+  .contact-section,
+  .solutions-section,
+  .logo-slider-section,
+  .contact-page-main,
+  .contact-page-offices,
+  .estimate-section,
+  .estimate-info,
+  .estimate-faq,
+  .kh-section,
+  .kh-cta,
+  .perks-section {
+    padding-top: var(--mobile-section-gap) !important;
+    padding-bottom: var(--mobile-section-gap) !important;
+  }
+
+  .py-5 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .mb-5 {
+    margin-bottom: 2rem !important;
+  }
+
+  .section-title {
+    font-size: clamp(1.35rem, 6.2vw, 1.9rem);
+    line-height: 1.2;
+  }
+
+  .section-desc {
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+
+  .problem-card,
+  .solution-card-home,
+  .feature-box-item,
+  .service-card,
+  .contact-form-wrap,
+  .map-wrap,
+  .partner-card,
+  .estimate-box,
+  .faq-item,
+  .kh-card,
+  .kh-bite,
+  .benefit-card,
+  .process-card {
+    border-radius: var(--mobile-card-radius) !important;
+    box-shadow: var(--mobile-card-shadow);
+  }
+
+  .btn,
+  button {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --mobile-section-gap: 44px;
+  }
+
+  .hero-section .btn,
+  .contact-section .btn,
+  .estimate-page .btn,
+  .contact-page-main .btn,
+  .kh-cta .btn,
+  .cta-section .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 380px) {
   .container,
   .container-fluid {
@@ -121,3 +219,4 @@ iframe {
     padding-right: 12px;
   }
 }
+
