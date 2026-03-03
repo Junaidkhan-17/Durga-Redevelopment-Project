@@ -25,7 +25,7 @@ function ContactUs() {
       formData.message
     )}`;
 
-    window.open(`https://wa.me/919876543210?text=${whatsappText}`, "_blank");
+    window.open(`https://wa.me/+917507002255?text=${whatsappText}`, "_blank");
   };
 
   return (

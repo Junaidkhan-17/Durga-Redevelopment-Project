@@ -24,10 +24,10 @@
   background: linear-gradient(
     95deg,
     rgba(8, 24, 46, 0.92) 0%,
-    rgba(10, 30, 56, 0.8) 32%,
-    rgba(13, 38, 68, 0.45) 48%,
-    rgba(15, 43, 76, 0.16) 60%,
-    rgba(6, 25, 47, 0) 72%
+    rgba(10, 30, 56, 0.8) 42%,
+    rgba(13, 38, 68, 0.45) 68%,
+    rgba(15, 43, 76, 0.16) 80%,
+    rgba(6, 25, 47, 0) 92%
   );
   background-repeat: no-repeat;
   background-position: left center;
@@ -49,7 +49,7 @@
   background: transparent;
   display: flex;
   align-items: flex-start;
-  padding: 110px 0 90px;
+  padding: 100px 0 90px;
 }
 
 .hero-container {
