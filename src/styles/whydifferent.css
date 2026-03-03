@@ -51,7 +51,6 @@
 
 
 /* Card */
-
 .different-card {
   background: linear-gradient(
     145deg,
@@ -72,6 +71,29 @@
   overflow: hidden;
 
   transform-style: preserve-3d;
+  /* Touch-friendly */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Touch device hover effect */
+@media (hover: none) and (pointer: coarse) {
+  .different-card:active {
+    transform:
+      translateY(-15px)
+      rotateX(6deg)
+      rotateY(-6deg)
+      scale(1.05);
+
+    box-shadow:
+      0 30px 60px rgba(0,0,0,0.6),
+      0 0 40px rgba(83, 152, 255, 0.4);
+  }
+
+  .different-card:active .different-icon {
+    transform: translateZ(30px) scale(1.4);
+    text-shadow: 0 0 25px gold;
+  }
 }
 
 
@@ -229,22 +251,171 @@
 
 /* Responsive */
 
-@media (max-width: 900px) {
-
-  .different-grid {
-    grid-template-columns: 1fr 1fr;
+@media (max-width: 992px) {
+  .different-section {
+    padding: 80px 16px;
   }
 
-}
+  .different-header h2 {
+    font-size: 38px;
+  }
 
-@media (max-width: 500px) {
+  .different-header p {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
 
   .different-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .different-card {
+    padding: 30px 20px;
+    border-radius: 18px;
+  }
+
+  .different-icon {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+
+  .different-card h4 {
+    font-size: 18px;
+  }
+
+  .different-card p {
+    font-size: 13px;
+  }
+
+  .different-btn-box {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .different-section {
+    padding: 60px 14px;
   }
 
   .different-header h2 {
     font-size: 32px;
   }
 
+  .different-header p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .different-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .different-card {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .different-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .different-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .different-card h4 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .different-card p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .different-btn-box {
+    margin-top: 36px;
+  }
+
+  .different-btn {
+    padding: 12px 32px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .different-section {
+    padding: 48px 12px;
+  }
+
+  .different-header h2 {
+    font-size: 26px;
+  }
+
+  .different-header p {
+    font-size: 20px;
+    margin-bottom: 32px;
+  }
+
+  .different-card {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .different-icon {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .different-card h4 {
+    font-size: 16px;
+  }
+
+  .different-card p {
+    font-size: 12px;
+  }
+
+  .different-btn-box {
+    margin-top: 28px;
+  }
+
+  .different-btn {
+    padding: 11px 28px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .different-section {
+    padding: 36px 10px;
+  }
+
+  .different-header h2 {
+    font-size: 22px;
+  }
+
+  .different-header p {
+    font-size: 18px;
+    margin-bottom: 26px;
+  }
+
+  .different-card {
+    padding: 18px 14px;
+  }
+
+  .different-icon {
+    font-size: 24px;
+  }
+
+  .different-card h4 {
+    font-size: 15px;
+  }
+
+  .different-btn {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
 }

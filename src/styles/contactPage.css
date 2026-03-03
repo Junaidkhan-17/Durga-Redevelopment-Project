@@ -109,6 +109,18 @@
   border-radius: 18px;
   padding: 20px;
   transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  /* Touch-friendly */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Touch device hover effect */
+@media (hover: none) and (pointer: coarse) {
+  .contact-method-card:active {
+    transform: translateY(-8px);
+    border-color: #ffd66e;
+    box-shadow: 0 16px 34px rgba(224, 149, 0, 0.17);
+  }
 }
 
 .contact-method-card:hover {
@@ -267,6 +279,17 @@
   border-radius: 16px;
   padding: 18px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  /* Touch-friendly */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Touch device hover effect */
+@media (hover: none) and (pointer: coarse) {
+  .contact-office-card:active {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(32, 44, 64, 0.1);
+  }
 }
 
 .contact-office-card:hover {

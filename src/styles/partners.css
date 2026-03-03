@@ -68,6 +68,17 @@
   background: #fff;
   border: 1px solid #ececec;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  /* Touch-friendly */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Touch device hover effect */
+@media (hover: none) and (pointer: coarse) {
+  .logo-tile:active {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .logo-tile:hover {
@@ -128,12 +139,65 @@
 }
 
 @media (max-width: 992px) {
-  .partner-cards {
-    grid-template-columns: 1fr;
+  .partners-section {
+    padding: 70px 0;
+  }
+
+  .partners-header {
+    margin-bottom: 26px;
   }
 
   .partners-header h2 {
     font-size: 34px;
+  }
+
+  .partners-header p {
+    font-size: 16px;
+  }
+
+  .our-panel,
+  .technical-partners {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .our-panel h3,
+  .technical-partners h3 {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .logo-tile {
+    min-width: 150px;
+    min-height: 80px;
+    margin: 8px;
+  }
+
+  .logo-tile img {
+    max-width: 100px;
+    max-height: 40px;
+  }
+
+  .partner-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .partner-card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .partner-card h4 {
+    font-size: 17px;
+  }
+
+  .partner-card h5 {
+    font-size: 13px;
+  }
+
+  .partner-card p {
+    font-size: 13px;
   }
 
   .partners-logo-track {
@@ -141,22 +205,137 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .partners-section {
-    padding: 60px 0;
+    padding: 56px 0;
+  }
+
+  .partners-header {
+    margin-bottom: 22px;
   }
 
   .partners-header h2 {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .partners-header p {
     font-size: 15px;
   }
 
+  .our-panel,
+  .technical-partners {
+    padding: 18px;
+  }
+
+  .our-panel h3,
+  .technical-partners h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
   .logo-tile {
-    min-width: 140px;
-    min-height: 76px;
-    margin: 8px;
+    min-width: 130px;
+    min-height: 70px;
+    margin: 6px;
+  }
+
+  .logo-tile img {
+    max-width: 85px;
+    max-height: 35px;
+  }
+
+  .partner-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .partner-card {
+    padding: 16px;
+  }
+
+  .partner-card:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 576px) {
+  .partners-section {
+    padding: 44px 0;
+  }
+
+  .partners-header {
+    margin-bottom: 18px;
+  }
+
+  .partners-header h2 {
+    font-size: 24px;
+  }
+
+  .partners-header p {
+    font-size: 14px;
+  }
+
+  .our-panel,
+  .technical-partners {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .our-panel h3,
+  .technical-partners h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .logo-tile {
+    min-width: 120px;
+    min-height: 65px;
+    margin: 6px;
+  }
+
+  .logo-tile img {
+    max-width: 75px;
+    max-height: 30px;
+  }
+
+  .partner-card {
+    padding: 14px;
+  }
+
+  .partner-card h4 {
+    font-size: 16px;
+  }
+
+  .partner-card h5 {
+    font-size: 12px;
+  }
+
+  .partner-card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .partners-section {
+    padding: 36px 0;
+  }
+
+  .partners-header h2 {
+    font-size: 22px;
+  }
+
+  .partners-header p {
+    font-size: 13px;
+  }
+
+  .logo-tile {
+    min-width: 110px;
+    min-height: 60px;
+    margin: 5px;
+  }
+
+  .logo-tile img {
+    max-width: 65px;
+    max-height: 28px;
   }
 }

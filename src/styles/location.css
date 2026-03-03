@@ -52,7 +52,6 @@
 
 
 /* Chips */
-
 .location-list span {
   padding: 9px 20px;
 
@@ -69,11 +68,24 @@
   backdrop-filter: blur(6px);
 
   transition: all 0.35s ease;
+  
+  /* Touch-friendly */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
+/* Touch device hover effect */
+@media (hover: none) and (pointer: coarse) {
+  .location-list span:active {
+    background: rgba(255,215,0,0.1);
+    border-color: #ffd700;
+    color: #b8860b;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(255,215,0,0.4);
+  }
+}
 
 /* Hover */
-
 .location-list span:hover {
   background: rgba(255,215,0,0.1);
   border-color: #ffd700;
@@ -106,10 +118,105 @@
 
 /* Responsive */
 
-@media (max-width: 600px) {
-
-  .location-header h2 {
-    font-size: 30px;
+@media (max-width: 992px) {
+  .location-section {
+    padding: 70px 16px;
   }
 
+  .location-header h2 {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+
+  .location-header p {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  .location-list {
+    gap: 12px;
+  }
+
+  .location-list span {
+    padding: 8px 18px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location-section {
+    padding: 56px 14px;
+  }
+
+  .location-header h2 {
+    font-size: 28px;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .location-header p {
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  .location-list {
+    gap: 10px;
+  }
+
+  .location-list span {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .location-list span:hover {
+    transform: translateY(-3px) scale(1.03);
+  }
+}
+
+@media (max-width: 576px) {
+  .location-section {
+    padding: 44px 12px;
+  }
+
+  .location-header h2 {
+    font-size: 24px;
+  }
+
+  .location-header p {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .location-list {
+    gap: 8px;
+  }
+
+  .location-list span {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .location-section {
+    padding: 36px 10px;
+  }
+
+  .location-header h2 {
+    font-size: 22px;
+  }
+
+  .location-header p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .location-list {
+    gap: 6px;
+  }
+
+  .location-list span {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 }

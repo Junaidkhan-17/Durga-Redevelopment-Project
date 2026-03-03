@@ -120,6 +120,27 @@
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.24);
   transform: perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0);
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  /* Touch-friendly */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Touch device hover effect */
+@media (hover: none) and (pointer: coarse) {
+  .knowledge-hub-page .kh-hero-image-card:active {
+    transform: perspective(900px) rotateX(2deg) rotateY(-3deg) translateY(-8px);
+    border-color: rgba(255, 210, 118, 0.8);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.34), 0 0 24px rgba(255, 210, 118, 0.2);
+  }
+
+  .knowledge-hub-page .kh-hero-image-card:active::after {
+    transform: translateX(130%);
+  }
+
+  .knowledge-hub-page .kh-hero-image-card:active img {
+    transform: scale(1.06);
+    filter: saturate(1.08) contrast(1.03);
+  }
 }
 
 .knowledge-hub-page .kh-hero-image-card::after {
@@ -197,6 +218,18 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(7px);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  /* Touch-friendly */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Touch device hover effect */
+@media (hover: none) and (pointer: coarse) {
+  .knowledge-hub-page .kh-card:active {
+    transform: translateY(-8px);
+    border-color: rgba(240, 207, 122, 0.7);
+    box-shadow: 0 18px 28px rgba(0, 0, 0, 0.28);
+  }
 }
 
 .knowledge-hub-page .kh-card:hover {
@@ -278,6 +311,16 @@
   background: linear-gradient(145deg, #f8e2a7, #d9a82b);
   margin-bottom: 12px;
   transition: transform 0.3s ease;
+  /* Touch-friendly */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Touch device hover effect */
+@media (hover: none) and (pointer: coarse) {
+  .knowledge-hub-page .kh-category-card:active .kh-icon {
+    transform: rotate(8deg) scale(1.08);
+  }
 }
 
 .knowledge-hub-page .kh-category-card:hover .kh-icon {
@@ -434,6 +477,17 @@
   color: #102a4f;
   padding: 11px 22px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  /* Touch-friendly */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Touch device hover effect */
+@media (hover: none) and (pointer: coarse) {
+  .knowledge-hub-page .kh-cta-btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .knowledge-hub-page .kh-cta-btn:hover {
