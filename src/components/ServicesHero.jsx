@@ -8,6 +8,7 @@ import qualityaudits from "../image/qualityaudits.png";
 import investmentadvisory from "../image/investmentadvisory.png";
 import feasibilityaudit from "../image/feasibilityaudit.png";
 import oldnewway from "../image/oldnewway.png";
+import servicecta from "../image/servicecta.jpg";
 import {
   FaBuilding,
   FaBuildingShield,
@@ -349,7 +350,8 @@ export default function ServicesHero() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="cta-section text-center">
+      <section className="cta-section text-center"
+      style={{ backgroundImage: `url(${servicecta})` }} >
 
         <div className="cta-badges">
           <div className="cta-badge js-reveal-up">
